@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+  <xs:element name="cine">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="comidas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="comida" type="xs:string" minOccurs="1" maxOccurs="10"/>
+              <xs:element name="bebida" type="xs:string" minOccurs="1" maxOccurs="10" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="entradas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="entrada" minOccurs="0" maxOccurs="10">
+                <xs:complexType>
+
+                  <xs:sequence>
+                    <xs:element name="id_pelicula">
+                     <xs:simpleType>
+                       <xs:restriction base="xs:integer">
+                          <xs:minExclusive value="0"/>
+                          <xs:maxExclusive value="100"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+
+                  <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+
+        <xs:element name="peliculas">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element name="pelicula" minOccurs="1" maxOccurs="10">
+                <xs:complexType>
+
+                  <xs:sequence>
+                    <xs:element name="nombre_peli" type="xs:string"/>
+                    <xs:element name="fecha_de_esteno" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="hora" type="xs:time" minOccurs="0" maxOccurs="10"/>
+                  </xs:sequence>
+
+                  <xs:attribute name="id" type="xs:positiveInteger" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" minOccurs="1" maxOccurs="10">
+                <xs:complexType>
+                  <xs:sequence>
+
+                      <xs:element name="id_usu">
+                       <xs:complexType>
+                         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                       </xs:complexType>
+                      </xs:element>
+
+                      <xs:element name="nombre" type="xs:string"/>
+                      <xs:element name="apellido" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<cine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="practica.xsd">
+  <comidas>
+    <comida>Palomitas</comida>
+    <comida>Regalices</comida>
+    <comida>Chocolate</comida>
+    <comida>Ruffles</comida>
+    <bebida>Fanta</bebida>
+    <bebida>Coca-Cola</bebida>
+    <bebida>Nestea</bebida>
+    <bebida>Monster Energy</bebida>
+  </comidas>
+
+  <entradas>
+    <entrada id="1">
+      <id_pelicula>1</id_pelicula>
+    </entrada>
+    <entrada id="2">
+      <id_pelicula>2</id_pelicula>
+    </entrada>
+
+  </entradas>
+
+  <peliculas>
+    <pelicula id="1">
+      <nombre_peli>nobody</nombre_peli>
+      <fecha_de_esteno>2021-06-20</fecha_de_esteno>
+      <hora>10:30:00</hora>
+      <hora>16:00:00</hora>
+
+    </pelicula>
+
+    <pelicula id="2">
+      <nombre_peli>Cuñados</nombre_peli>
+      <fecha_de_esteno>2021-04-10</fecha_de_esteno>
+      <hora>20:15:00</hora>
+      <hora>18:20:00</hora>
+
+    </pelicula>
+
+    <pelicula>
+      <nombre_peli>Josep</nombre_peli>
+
+    </pelicula>
+
+  </peliculas>
+
+  <usuarios>
+
+    <usuario>
+      <id_usu id="1"></id_usu>
+      <nombre>ramon</nombre>
+      <apellido>fernacez</apellido>
+
+    </usuario>
+
+    <usuario>
+      <id_usu id="2"></id_usu>
+      <nombre>jose</nombre>
+      <apellido>Joseph</apellido>
+
+    </usuario>
+
+    <usuario>
+      <id_usu id="3"></id_usu>
+      <nombre>alex</nombre>
+
+    </usuario>
+
+  </usuarios>
+
+
+
+</cine>
